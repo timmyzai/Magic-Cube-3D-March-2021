@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>3D Cube</title>
+		<!-- Site Icons -->
+		<link rel="shortcut icon" href="img/heart.png" sizes="16x16" type="image/png" />
+		<!-- css -->
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="styles.css" type="text/css">
+	</head>
+	<body onload="setup()" onmouseup="stopEvent()" onkeyup="stopEvent()" onkeydown="keyboard(event)">
+		<div id="huge_container" onkeyup="stopEvent()" onmouseup="stopEvent()">
+			<div id="controllers">
+				<div id="Effect_controller">
+					<a href="#" class="btn btn-success"onclick="removeEffect()"> Remove Effect</a>
+					<a href="#" class="btn btn-success"onclick="applyEffect()"> Apply Effect</a>
+					<a href="#" class="btn btn-success"onclick="pauseEffect()">Pause Effect</a>
+					<a href="#" class="btn btn-warning"onclick="changeImg()">Switch Image</a>
+					<a href="#" class="btn btn-warning text-center"onclick="changeCtg()"><small>Swith Image Set</small></a>
+				</div>
+				<div id="Cube_controller">
+					<a href="#" class="btn btn-danger"onclick="zoomInCube()">
+						<i class="fa fa-plus fa-5x" aria-hidden="true"></i>
+						<br>zoom in
+					</a><br>
+					<a href="#" class="btn btn-danger"onclick="zoomOutCube()">
+						<i class="fa fa-minus fa-5x" aria-hidden="true"></i>
+						<br>zoom out
+					</a><br>
+					<a href="#" class="btn btn-danger" onclick="playCube()">
+						<i class="fa fa-play fa-5x" aria-hidden="true"></i>
+						<br>start
+					</a><br>
+					<a href="#" class="btn btn-danger"onclick="pauseCube()">
+						<i class="fa fa-pause fa-5x" aria-hidden="true"></i>
+						<br>pause
+					</a>
+				</div>
+				<div id="Arrows_controller">
+					<a id="arrowZ_left" href="#" class="btn btn-info" onmousedown="mousedown(event)">
+						<i class="fa fa-arrow-circle-up fa-4x fa-rotate-315" aria-hidden="true"></i>
+						<br>Q
+					</a>
+					<a id="arrowUp" href="#" class="btn btn-primary" onmousedown="mousedown(event)">
+						<i class="fa fa-arrow-circle-up fa-4x" aria-hidden="true"></i>
+						<br>W
+					</a>
+					<a id="arrowZ_right" href="#" class="btn btn-info"  onmousedown="mousedown(event)">
+						<i class="fa fa-arrow-circle-up fa-4x fa-rotate-45" aria-hidden="true"></i>
+						<br>E
+					</a>
+					<a id="arrowLeft" href="#" class="btn btn-primary" onmousedown="mousedown(event)">
+						<i class="fa fa-arrow-circle-left fa-4x" aria-hidden="true"></i>
+						<br>A
+					</a>
+					<a id="arrowDown" href="#" class="btn btn-primary" onmousedown="mousedown(event)">
+						<i class="fa fa-arrow-circle-down fa-4x" aria-hidden="true"></i>
+						<br>S
+					</a>
+					<a id="arrowRight" href="#" class="btn btn-primary" onmousedown="mousedown(event)">
+						<i class="fa fa-arrow-circle-right fa-4x" aria-hidden="true"></i>
+						<br>D
+					</a>
+				</div>
+			</div>
+			<div id="cube_container" onmousedown="getMousePos1()" >
+				<a href="#">
+					<div id="box" class="boxAnimation">
+						<div class="box-page" id="top"></div>
+						<div class="box-page" id="btm"></div>
+						<div class="box-page" id="rgt"></div>
+						<div class="box-page" id="lft"></div>
+						<div class="box-page" id="frt"></div>
+						<div class="box-page" id="bck"></div>
+					</div>
+				</a>
+			</div>
+		</div>
+		<script src="js/effect.js"></script>
+	</body>
+</html>

@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;				
+}
+body{
+    background-color: black;
+}
+#huge_container{
+    height: 100vh;
+}
+.btn{
+    margin-top: 10px;
+    padding: 15px;
+    width: 150px;
+    /* text-align: center; */
+}
+#ChgImage_controller{
+    position: absolute;
+    text-align: center;
+    top: 250px;
+    left: 100px;
+}
+#Effect_controller{
+    margin: 0 auto;
+    text-align: center;
+}
+#Effect_controller a{
+    font-weight: 600;
+    font-size: large;
+}
+#Cube_controller{
+    position: absolute;
+    text-align: center;
+    top: 100px;
+    right: 100px;
+}
+#Arrows_controller{
+    width: 460px;
+    position: absolute;
+    top: 439px;
+    left: 50px;
+    background-color: black;
+}
+#Arrows_controller .btn{
+    margin-top: 4px;
+}
+#cube_container{
+    width: 300px;
+    height: 300px;
+    margin: 120px auto;
+    perspective: 2000000px;
+}
+#box{
+    width: 300px;
+    height: 300px;
+    transform-style: preserve-3d;
+    animation-play-state: running;
+}
+.boxAnimation{
+    animation: ro 5s linear infinite;
+}
+@keyframes ro {
+    0%{
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+    50%{
+        transform: rotateX(360deg) rotateY(180deg);;
+    }
+    100%{
+        transform: rotateX(720deg) rotateY(360deg);
+    }	
+}
+.box-page{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    transform-style: preserve-3d;
+}
+.box-page div{
+    position: absolute;
+}
+.animation1{
+    animation: a1 4.5s ease-in ;
+    animation-play-state: running;
+}
+.animation2{
+    animation: a1 4.5s ease-in 0.5s	;
+    animation-play-state: running;
+}
+.animation3{
+    animation: a1 4.5s ease-in 1.5s	;
+    animation-play-state: running;
+}
+.animation4{
+    animation: a1 4.5s ease-in 2.0s	;
+    animation-play-state: running;
+}
+.animation5{
+    animation: a1 4.5s ease-in 2.5s	;
+    animation-play-state: running;
+}
+.animation6{
+    animation: a1 4.5s ease-in 3.0s	;
+    animation-play-state: running;
+}
+.animation7{
+    animation: a1 4.5s ease-in 3.5s	;
+    animation-play-state: running;
+}
+.animation8{
+    animation: a1 4.5s ease-in 4.0s	;
+    animation-play-state: running;
+}
+.animation9{
+    animation: a1 4.5s ease-in 4.5s	;
+    animation-play-state: running;
+}
+@keyframes a1 {
+    0%{
+        transform: translateZ(0px) scale(1) rotateZ(0deg);
+    }
+    20%{
+        transform: translateZ(300px) scale(0) rotateZ(720deg);
+    }
+    90%{
+        transform: translateZ(300px) scale(0) rotateZ(720deg);
+    }
+    100%{
+        transform: translateZ(0px) scale(1) rotateZ(0deg);
+    }				
+}
+.fa-rotate-45 {
+    transform: rotate(45deg);
+  }
+.fa-rotate-315 {
+    transform: rotate(315deg);
+}
